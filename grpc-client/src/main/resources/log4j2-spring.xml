@@ -10,9 +10,9 @@
         <property name="LOG_PATTERN" value="%date{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger [%L] : %msg%n" />
         <property name="LOG_PATTERN_HIGHLIGHT" value="%date{yyyy-MM-dd HH:mm:ss:SSS} %highlight{%5level} [%thread] %style{%logger}{bright,cyan} [%style{%L}{bright,blue}] : %msg%n" />
         <!-- 定义日志存储的路径，不要配置相对路径 -->
-        <property name="FILE_PATH" value="/home/logs/grpc-server" />
+        <property name="FILE_PATH" value="/home/logs/grpc-client" />
         <!-- 定义日志归档压缩包名字，通常设置为项目名 -->
-        <property name="FILE_NAME" value="grpc-server" />
+        <property name="FILE_NAME" value="grpc-client" />
     </Properties>
 
     <appenders>

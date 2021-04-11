@@ -6,7 +6,7 @@
     <artifactId>springboot-grpc-nacos</artifactId>
     <version>1.0</version>
     <name>springboot-grpc-nacos</name>
-    <description>SpringBoot-GRPC-Nacos</description>
+    <description>SpringBoot-GRPC-Nacos2.0</description>
     <packaging>pom</packaging>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -14,6 +14,12 @@
         <version>2.3.5.RELEASE</version>
         <relativePath/>
     </parent>
+    <modules>
+        <module>grpc-api</module>
+        <module>grpc-server</module>
+        <module>grpc-client</module>
+    </modules>
+
     <properties>
         <java.version>8</java.version>
         <nacos.version>2.2.5.RELEASE</nacos.version>
@@ -23,13 +29,8 @@
         <lombok.version>1.18.12</lombok.version>
         <fastjson.version>1.2.76</fastjson.version>
         <freemarker.verson>2.3.28</freemarker.verson>
+        <nacos.client>2.0.0</nacos.client>
     </properties>
-
-    <modules>
-        <module>grpc-api</module>
-        <module>grpc-server</module>
-        <module>grpc-client</module>
-    </modules>
 
     <dependencyManagement>
         <dependencies>
@@ -50,4 +51,21 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>aliyun maven</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <layout>default</layout>
+            <!-- 是否开启发布版构件下载 -->
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <!-- 是否开启快照版构件下载 -->
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>
