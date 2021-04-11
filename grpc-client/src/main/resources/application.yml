@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: greeter-grpc-client
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        enabled: true
+grpc:
+  client:
+    GLOBAL:
+      negotiation-type: plaintext
+      enable-keep-alive: true
+      keep-alive-without-calls: true
+server:
+  port: 8090

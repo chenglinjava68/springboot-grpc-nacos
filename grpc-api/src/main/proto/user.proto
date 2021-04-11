@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.hualala.aleenjava.grpc.user";
+
+service UserService {
+  rpc queryUser(UserRequest) returns (UserReply) {}
+}
+message UserRequest {
+  string name = 1;
+  int64 id = 2;
+}
+message UserReply {
+  int32 code = 1;
+  string msg = 2;
+  bool success = 3;
+  message Data {
+    UserPb userPb = 1;
+  }
+  Data data = 4;
+}
+
+message UserPb {
+  int64 id = 1;
+  string nick = 2;
+  string email = 3;
+  string phone = 4;
+  double balance = 5;
+  int64 bornAt = 6;
+  int64 flag = 7;
+  int64 vip = 8;
+}
